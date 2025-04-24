@@ -1,5 +1,7 @@
 <script setup>
   import Button from './components/Button.vue'
+  import OptionsComponent from './components/OptionsComponent.vue';
+  import CompositionsComponent from './components/CompositionsComponent.vue';
   const name = "Fulan Bin Fulan"
 </script>
 
@@ -7,6 +9,8 @@
   <Button/>{{ name }}
   
   <h1>Hello Word</h1>
+  <OptionsComponent/>
+  <CompositionsComponent/>
 </template>
 
 <style scoped>

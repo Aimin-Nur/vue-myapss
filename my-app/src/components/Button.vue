@@ -1,10 +1,10 @@
 <script setup>
-
+let name = "Start"
 </script>
 
 <template>
     <div>
-        <button>Button</button>
+       <button>{{ name }}</button>
     </div>
 </template>
 

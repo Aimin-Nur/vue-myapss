@@ -1,8 +1,9 @@
 <script setup>
   import Button from './components/Button.vue'
-  import OptionsComponent from './components/OptionsComponent.vue';
-  import CompositionsComponent from './components/CompositionsComponent.vue';
+  import OptionsComponent from './components/OptionsComponent.vue'
   const name = "Fulan Bin Fulan"
+  const blogPost = '<p style="color:red">Blog Wordpress</p>'
+  const idBlog = 'Blog 1'
 </script>
 
 <template>
@@ -11,6 +12,11 @@
   <h1>Hello Word</h1>
   <OptionsComponent/>
   <CompositionsComponent/>
+
+  <div>
+    {{ blogPost }}
+  </div>
+  <div v-bind:id="idBlog" v-html="blogPost"></div>
 </template>
 
 <style scoped>

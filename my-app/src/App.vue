@@ -4,10 +4,15 @@
   const name = "Fulan Bin Fulan"
   const blogPost = '<p style="color:red">Blog Wordpress</p>'
   const idBlog = 'Blog 1'
+
+  const props = defineProps(['title'])
 </script>
 
 <template>
   <Button/>{{ name }}
+  <Button :title="`test`" />
+  <Button :title="`submit`" />
+  <Button>{{ props }}</Button>
   
   <h1>Hello Word</h1>
   <OptionsComponent/>

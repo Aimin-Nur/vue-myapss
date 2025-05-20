@@ -1,8 +1,9 @@
 <script setup>
-const isLoading = true
+const isLoading = false
 let name = "Start"
 const ButtonAttr = {
-    disabled: true,
+    type: 'button',
+    disabled: isLoading,
     class: 'text-3xl bg-black',
     id : 1
 }
@@ -14,11 +15,18 @@ const renderIsLoading = () => {
         return 'Submit'
     }
 }
+
+const url = {
+    attr: 'href',
+    link: '/home'
+}
 </script>
 
 <template>
     <div>
-       <button v-bind="ButtonAttr">{{ isLoading ? 'Loading' : 'Submit' }}</button>
+        <a :[url.attr]="url.link">
+            <button v-bind="ButtonAttr" :id="`id-${1}`">{{ isLoading ? 'Loading' : 'Submit' }}</button>
+        </a>
        <button v-bind="ButtonAttr">{{ renderIsLoading() }}</button>
     </div>
 </template>
